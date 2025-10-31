@@ -393,6 +393,7 @@
             transform: translateX(-50%);
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
@@ -403,6 +404,7 @@
             font-weight: 600;
             color: var(--accent);
             border: 2px solid var(--accent-light);
+            white-space: nowrap;
         }
 
         .doctor-badge svg {
