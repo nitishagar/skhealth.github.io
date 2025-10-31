@@ -14,7 +14,7 @@ SK Health Clinic provides comprehensive family healthcare services with over 26 
 
 ## 🎨 Features
 
-- **Secure & Fast**: Google Maps API key secured via Cloudflare Pages Functions
+- **Clean & Simple**: No external dependencies, fast loading times
 - **SEO Optimized**: Complete meta tags, structured data, sitemap
 - **Accessible**: WCAG 2.1 AA compliant with keyboard navigation
 - **Responsive**: Works seamlessly on desktop, tablet, and mobile
@@ -24,9 +24,8 @@ SK Health Clinic provides comprehensive family healthcare services with over 26 
 
 - **Frontend**: Vanilla HTML5, CSS3, JavaScript (ES6+)
 - **Hosting**: Cloudflare Pages (auto-deployed from GitHub)
-- **Maps**: Google Maps JavaScript API (proxied via Cloudflare Functions)
 - **Fonts**: Google Fonts (Inter)
-- **Security**: CSP headers, secure API key management
+- **Security**: CSP headers, secure configuration
 
 ## 📁 Project Structure
 
@@ -34,9 +33,6 @@ SK Health Clinic provides comprehensive family healthcare services with over 26 
 skhealth.github.io/
 ├── index.html              # Main website file
 ├── styles.css              # External stylesheet
-├── functions/              # Cloudflare Pages Functions
-│   └── api/
-│       └── maps-config.js  # Secure API key proxy
 ├── _headers                # Security & caching headers
 ├── robots.txt              # Search engine directives
 ├── sitemap.xml             # SEO sitemap
@@ -74,17 +70,6 @@ skhealth.github.io/
 3. **Edit files**:
    - `index.html` - Website content and structure
    - `styles.css` - Styling and colors
-   - `functions/api/maps-config.js` - API proxy logic
-
-### Environment Variables
-
-The Google Maps API key is stored securely in Cloudflare Pages:
-
-- **Variable Name**: `GOOGLE_API_KEY`
-- **Location**: Cloudflare Dashboard → Workers & Pages → skhealth → Settings → Environment variables
-- **Used By**: `functions/api/maps-config.js` proxy
-
-⚠️ Never commit API keys to the repository.
 
 ## 🌐 Deployment
 
@@ -133,10 +118,9 @@ wrangler pages publish . --project-name=skhealth
 
 ## 🔒 Security
 
-- **API Key Protection**: Stored in environment variables, accessed via server-side function
 - **Security Headers**: CSP, X-Frame-Options, X-Content-Type-Options configured
 - **Link Security**: All external links use `rel="noopener noreferrer"`
-- **No Secrets in Repo**: .gitignore prevents committing sensitive files
+- **No Sensitive Data**: No API keys or secrets required
 
 ## 📱 Contact Information
 

@@ -100,23 +100,36 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="hero-image-primary">
-                    <img src="./sanjeev-hero.png"
-                         alt="Dr. Sanjeev Agarwal - General Physician with 26+ years of experience"
-                         width="600"
-                         height="900"
-                         loading="eager"
-                         decoding="async"
-                         class="doctor-portrait">
-                </div>
-                <div class="hero-image-secondary">
-                    <div class="facility-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-doctor-card">
+                        <img src="./sanjeev-hero.png"
+                             alt="Dr. Sanjeev Agarwal - General Physician with 26+ years of experience"
+                             width="400"
+                             height="600"
+                             loading="eager"
+                             decoding="async"
+                             class="doctor-portrait">
+                        <div class="doctor-badge">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"/>
+                            </svg>
+                            <span>26+ Years</span>
+                        </div>
+                    </div>
+                    <div class="hero-facility-card">
                         <img src="./exterior.png"
                              alt="SK Health Clinic - Professional medical facility in Nehru Nagar"
-                             width="800"
-                             height="400"
+                             width="500"
+                             height="300"
                              loading="lazy"
-                             decoding="async">
+                             decoding="async"
+                             class="facility-image">
+                        <div class="facility-badge">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Nehru Nagar, Ghaziabad</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,36 +207,63 @@
         </div>
     </section>
 
-    <!-- Map Section (simplified) -->
-    <section class="map-section" id="location">
+    <!-- Location Section (Clean & Simple) -->
+    <section class="location-section" id="location">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Visit Us</div>
                 <h2>Our Location</h2>
             </div>
-            <div class="map-grid">
-                <div id="map"
-                     role="application"
-                     aria-label="Interactive map showing SK Health Clinic location at 2-A 19, Pocket B, Nehru Nagar II, Ghaziabad">
-                    <div class="map-loading">Loading map of clinic location...</div>
-                </div>
-                <div class="location-card">
+            <div class="location-content">
+                <div class="location-main-card">
+                    <div class="location-icon">
+                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
                     <h3>SK Health Clinic</h3>
-                    <div class="location-detail">
-                        <strong>Address</strong>
-                        <p>2 - A 19, Pocket B, Nehru Nagar II<br>
-                        Ghaziabad<br>
-                        Uttar Pradesh 201001</p>
+                    <div class="location-address">
+                        <p>2 - A 19, Pocket B, Nehru Nagar II</p>
+                        <p>Ghaziabad, Uttar Pradesh 201001</p>
                     </div>
-                    <div class="location-detail">
-                        <strong>Doctor</strong>
-                        <p>Dr. Sanjeev Agarwal<br>
-                        General Physician<br>
-                        26+ Years Experience</p>
+                    <div class="location-doctor-info">
+                        <div class="doctor-info-item">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                            <span>Dr. Sanjeev Agarwal</span>
+                        </div>
+                        <div class="doctor-info-item">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                            <span>General Physician</span>
+                        </div>
+                        <div class="doctor-info-item">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                            <span>26+ Years Experience</span>
+                        </div>
                     </div>
-                    <a href="https://maps.google.com/?q=28.664477,77.4441578" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">
-                        Get Directions
-                    </a>
+                    <div class="location-actions">
+                        <a href="https://maps.google.com/?q=28.664477,77.4441578"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Open in Google Maps
+                        </a>
+                        <a href="tel:+918700491681" class="btn btn-secondary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                            Call Now
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -501,169 +541,6 @@
             lastScroll = currentScroll;
         });
 
-        // Global flag to prevent multiple map initializations
-        let mapLoaded = false;
-
-        // Load Google Maps API securely via Cloudflare Function
-        async function loadGoogleMaps() {
-          if (mapLoaded) return; // Prevent duplicate loads
-
-          try {
-            // Fetch API key from secure server-side endpoint
-            const response = await fetch('/api/maps-config');
-
-            if (!response.ok) {
-              throw new Error(`API config fetch failed: ${response.status}`);
-            }
-
-            const { mapsApiKey } = await response.json();
-
-            if (!mapsApiKey) {
-              throw new Error('No API key received from server');
-            }
-
-            // Load Maps API dynamically
-            const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${mapsApiKey}&callback=initMap`;
-            script.async = true;
-            script.defer = true;
-            script.onerror = () => {
-              console.error('Failed to load Google Maps script');
-              showMapFallback();
-            };
-
-            mapLoaded = true;
-            document.head.appendChild(script);
-
-          } catch (error) {
-            console.error('Maps loading error:', error);
-            showMapFallback();
-          }
-        }
-
-        // Initialize map (called by Google Maps API via callback)
-        function initMap() {
-            const clinicLocation = { lat: 28.664477, lng: 77.4441578 };
-            
-            const mapStyles = [
-                {
-                    "featureType": "all",
-                    "elementType": "geometry.fill",
-                    "stylers": [{"weight": "2.00"}]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "geometry.stroke",
-                    "stylers": [{"color": "#9c9c9c"}]
-                },
-                {
-                    "featureType": "all",
-                    "elementType": "labels.text",
-                    "stylers": [{"visibility": "on"}]
-                },
-                {
-                    "featureType": "landscape",
-                    "elementType": "all",
-                    "stylers": [{"color": "#f2f2f2"}]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "all",
-                    "stylers": [{"visibility": "off"}]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "all",
-                    "stylers": [{"saturation": -100}, {"lightness": 45}]
-                },
-                {
-                    "featureType": "water",
-                    "elementType": "all",
-                    "stylers": [{"color": "#e6f0ff"}, {"visibility": "on"}]
-                }
-            ];
-
-            try {
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 16,
-                    center: clinicLocation,
-                    styles: mapStyles,
-                    disableDefaultUI: false,
-                    zoomControl: true,
-                    mapTypeControl: false,
-                    scaleControl: false,
-                    streetViewControl: false,
-                    rotateControl: false,
-                    fullscreenControl: true,
-                    gestureHandling: 'cooperative' // Better mobile UX
-                });
-
-                const marker = new google.maps.Marker({
-                    position: clinicLocation,
-                    map: map,
-                    title: "SK Health Clinic - Dr. Sanjeev Agarwal, General Physician",
-                    animation: google.maps.Animation.DROP
-                });
-
-                const infoWindow = new google.maps.InfoWindow({
-                    content: `
-                        <div style="padding: 15px; font-family: 'Inter', sans-serif;">
-                            <h3 style="margin: 0 0 10px; color: #1a1a1a;">SK Health Clinic</h3>
-                            <p style="margin: 5px 0; color: #666;">Dr. Sanjeev Agarwal</p>
-                            <p style="margin: 5px 0; color: #666;">General Physician</p>
-                            <p style="margin: 5px 0; color: #666;">2 - A 19, Pocket B, Nehru Nagar II</p>
-                            <p style="margin: 5px 0; color: #666;">Ghaziabad, UP 201001</p>
-                            <a href="https://maps.google.com/?q=28.664477,77.4441578"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               style="color: #5B828A; text-decoration: none; font-weight: 500;">Get Directions →</a>
-                        </div>
-                    `
-                });
-
-                marker.addListener("click", () => {
-                    infoWindow.open(map, marker);
-                });
-
-                // Show info window by default after a short delay
-                setTimeout(() => {
-                    infoWindow.open(map, marker);
-                }, 1000);
-
-            } catch (error) {
-                console.error('Map initialization error:', error);
-                showMapFallback();
-            }
-        }
-
-        // Fallback UI if map fails to load
-        function showMapFallback() {
-            const mapDiv = document.getElementById('map');
-            if (!mapDiv) return;
-
-            mapDiv.innerHTML = `
-                <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; background: #fafafa;">
-                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5B828A" stroke-width="2" style="margin-bottom: 1rem;">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        <p style="color: #1a1a1a; font-weight: 500; font-size: 1.125rem; margin-bottom: 0.5rem;">SK Health Clinic</p>
-                        <p style="color: #666; margin-bottom: 1rem;">2 - A 19, Pocket B, Nehru Nagar II<br>Ghaziabad, UP 201001</p>
-                        <a href="https://maps.google.com/?q=28.664477,77.4441578"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-primary">
-                            View on Google Maps
-                        </a>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Global error handler for Maps API authentication failures
-        window.gm_authFailure = showMapFallback;
-
         // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
@@ -689,13 +566,6 @@
                 observer.observe(el);
             });
         });
-
-        // Load map when page is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadGoogleMaps);
-        } else {
-            loadGoogleMaps();
-        }
     </script>
 </body>
 </html>
