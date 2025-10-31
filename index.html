@@ -47,7 +47,7 @@
             --accent-dark: #4a6d73;
             --text-primary: #1a1a1a;
             --text-secondary: #666666;
-            --text-light: #999999;
+            --text-light: #757575; /* Changed from #999999 for better contrast */
             --bg-white: #ffffff;
             --bg-light: #fafafa;
             --border: #e5e5e5;
@@ -858,10 +858,64 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Accessibility - Focus indicators for keyboard navigation */
+        *:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--accent-dark);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 6px rgba(91, 130, 138, 0.15);
+        }
+
+        .nav-menu a:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .menu-toggle:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+            background: var(--accent-light);
+        }
+
+        .whatsapp-float:focus-visible {
+            outline: 3px solid white;
+            outline-offset: 3px;
+            transform: scale(1.1);
+        }
+
+        /* Skip to main content link for keyboard users */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+            font-weight: 500;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid white;
+            outline-offset: 2px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip link for keyboard/screen reader users -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
     <header id="header">
         <nav>
@@ -872,10 +926,14 @@
                 <li><a href="#location">Location</a></li>
                 <li><a href="#reviews">Reviews</a></li>
             </ul>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
         </nav>
     </header>
@@ -997,8 +1055,10 @@
                 <h2>Our Location</h2>
             </div>
             <div class="map-grid">
-                <div id="map">
-                    <div class="map-loading">Interactive map loading...</div>
+                <div id="map"
+                     role="application"
+                     aria-label="Interactive map showing SK Health Clinic location at 2-A 19, Pocket B, Nehru Nagar II, Ghaziabad">
+                    <div class="map-loading">Loading map of clinic location...</div>
                 </div>
                 <div class="location-card">
                     <h3>SK Health Clinic</h3>
@@ -1233,7 +1293,11 @@
     </script>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/918700491681" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+    <a href="https://wa.me/918700491681"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Contact us on WhatsApp for appointment booking">
         <svg fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.04 1.04 4.34L2 22l5.66-1.04c1.3.68 2.8 1.04 4.34 1.04 5.52 0 10-4.48 10-10S17.52 2 12 2zm5.88 14.12c-.25.7-.99 1.32-1.62 1.5-.43.11-.99.2-2.88-.62-2.43-1.05-3.99-3.47-4.11-3.63-.12-.16-1-1.33-1-2.54 0-1.21.63-1.8.86-2.05.22-.25.49-.31.65-.31l.46.01c.15 0 .35-.06.55.42.2.49.68 1.68.75 1.8.06.12.1.27.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.11.11-.23.23-.1.46.13.23.58 1.02 1.25 1.64.86.81 1.58 1.06 1.81 1.18.23.12.36.1.49-.06.13-.16.56-.65.71-.88.15-.23.3-.19.5-.11.2.08 1.29.61 1.51.72.22.11.37.16.42.25.06.09.06.52-.19 1.21z"/>
         </svg>
@@ -1244,8 +1308,28 @@
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        function toggleMenu() {
+            const isExpanded = navMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        }
+
+        // Click handler
+        menuToggle.addEventListener('click', toggleMenu);
+
+        // Keyboard handler (Enter and Space keys)
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                toggleMenu();
+                menuToggle.focus(); // Return focus to button
+            }
         });
 
         // Close mobile menu on link click
