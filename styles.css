@@ -5,17 +5,17 @@
         }
 
         :root {
-            --primary: #0f172a;
-            --accent: #0891b2; /* Professional teal/cyan for medical */
-            --accent-light: #ecfeff;
-            --accent-dark: #0e7490;
-            --text-primary: #0f172a;
-            --text-secondary: #64748b;
-            --text-light: #94a3b8;
-            --bg-white: #ffffff;
-            --bg-light: #f8fafc;
-            --bg-gradient: linear-gradient(135deg, #ecfeff 0%, #ffffff 100%);
-            --border: #e2e8f0;
+            --primary: #1e293b;           /* Slightly warmer dark blue-gray */
+            --accent: #0d9488;            /* Warmer teal (shifted from cyan) */
+            --accent-light: #f0fdfa;      /* Warm mint background */
+            --accent-dark: #0f766e;       /* Deep teal */
+            --text-primary: #1e293b;      /* Matches primary */
+            --text-secondary: #64748b;    /* Unchanged - good neutral */
+            --text-light: #94a3b8;        /* Unchanged - good neutral */
+            --bg-white: #ffffff;          /* Unchanged */
+            --bg-light: #f8fafc;          /* Unchanged */
+            --bg-gradient: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%); /* Warm mint gradient */
+            --border: #e2e8f0;            /* Unchanged */
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
             --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
             --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
@@ -352,6 +352,56 @@
         .image-placeholder.large {
             grid-column: span 2;
             aspect-ratio: 2/1;
+        }
+
+        /* Professional Hero Image Layout */
+        .hero-image-primary {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            border: 4px solid var(--bg-white);
+            background: var(--bg-white);
+            margin-bottom: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-image-primary:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .doctor-portrait {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .hero-image-secondary {
+            position: relative;
+        }
+
+        .facility-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--border);
+            background: var(--bg-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .facility-image:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .facility-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         /* Section Styles */
