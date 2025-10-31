@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Health Clinic - Dr. Sanjeev Agarwal | General Physician in Ghaziabad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #5B828A;
+            --accent-light: #e8f4f6;
+            --accent-dark: #4a6d73;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --bg-white: #ffffff;
+            --bg-light: #fafafa;
+            --border: #e5e5e5;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 1.5px;
+            background: var(--text-primary);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section with Animation */
+        .hero {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(to bottom, var(--bg-white), var(--bg-light));
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Floating shapes animation */
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.03;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .hero::before {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            animation-delay: 0s;
+        }
+
+        .hero::after {
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+            bottom: -300px;
+            left: -300px;
+            animation-delay: -10s;
+        }
+
+        /* Additional floating elements */
+        .hero-bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.02;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            animation: float 25s infinite ease-in-out;
+        }
+
+        .hero-bg-shape:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            top: 20%;
+            left: 10%;
+            animation-delay: -5s;
+        }
+
+        .hero-bg-shape:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            bottom: 20%;
+            right: 20%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translate(30px, -30px) rotate(90deg) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 20px) rotate(180deg) scale(0.9);
+            }
+            75% {
+                transform: translate(-30px, -20px) rotate(270deg) scale(1.05);
+            }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 100px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: var(--bg-white);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+            border-color: var(--text-secondary);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .image-placeholder {
+            aspect-ratio: 1;
+            background: var(--bg-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.875rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .image-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        .image-placeholder.large {
+            grid-column: span 2;
+            aspect-ratio: 2/1;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: var(--bg-light);
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        #map {
+            height: 500px;
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            position: sticky;
+            top: 100px;
+        }
+
+        .location-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .location-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .location-detail strong {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-detail p {
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        /* Updated Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--accent-light) 0%, var(--bg-white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-main {
+            background: var(--bg-white);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(91, 130, 138, 0.15);
+            margin-bottom: 2rem;
+        }
+
+        .contact-cta-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-cta-card {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-cta-card:hover {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(91, 130, 138, 0.15);
+        }
+
+        .cta-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-cta-card h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-cta-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-cta-card .number {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .contact-hours {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .hours-card {
+            padding: 1.5rem;
+            background: var(--bg-white);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .hours-card h5 {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .hours-card p {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: var(--bg-light);
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 1rem 0 2rem;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        .reviews-track::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .reviews-track::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .reviews-track::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 100px;
+        }
+
+        .review-card {
+            min-width: 380px;
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            scroll-snap-align: start;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .review-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: start;
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .review-meta h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 0.875rem;
+        }
+
+        .review-date {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .review-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .footer-links h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 2;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* Map Loading */
+        .map-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .map-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-card {
+                position: static;
+            }
+
+            .contact-cta-group {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-hours {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .review-card {
+                min-width: 320px;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">SK<span>Health</span></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with animated background -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shape"></div>
+        <div class="hero-bg-shape"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Dr. Sanjeev Agarwal • 26+ Years Experience</div>
+                <h1>Expert Medical Care<br>in Ghaziabad</h1>
+                <p class="hero-description">
+                    Comprehensive general medicine and family healthcare services 
+                    with decades of trusted experience in Ghaziabad.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        Book Consultation
+                    </a>
+                    <a href="#location" class="btn btn-secondary">
+                        <span>📍</span> View Location
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-grid">
+                    <div class="image-placeholder">
+                        <img src="./skhealth-logo.png" alt="SKHealth" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-placeholder">
+                        <img src="./sanjeev-hero.png" alt="Sanjeev Agarwal Hero Image" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-placeholder large">
+                        <img src="./exterior.png" alt="Clinic Exterior" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (moved before location) -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Get in Touch</div>
+                <h2>Book Your Consultation</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-main">
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        Schedule your appointment with Dr. Sanjeev Agarwal today.<br>
+                        Choose your preferred method to connect with us.
+                    </p>
+                    
+                    <div class="contact-cta-group">
+                        <a href="https://wa.me/918700491681" target="_blank" rel="noopener noreferrer" class="contact-cta-card" style="text-decoration: none;">
+                            <div class="cta-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                            </div>
+                            <h4>WhatsApp</h4>
+                            <p>Quick & Easy</p>
+                            <div class="number">Message Us</div>
+                        </a>
+                        
+                        <a href="tel:+918700491681" class="contact-cta-card" style="text-decoration: none;">
+                            <div class="cta-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                                </svg>
+                            </div>
+                            <h4>Call Now</h4>
+                            <p>Direct Booking</p>
+                            <div class="number">+91 87004 91681</div>
+                        </a>
+
+                        <a href="mailto:support@skhealth.co.in" class="contact-cta-card" style="text-decoration: none;">
+                            <div class="cta-icon">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <h4>Email</h4>
+                            <p>Send Inquiry</p>
+                            <div class="number" style="font-size: 1rem;">support@skhealth.co.in</div>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-hours">
+                        <div class="hours-card">
+                            <h5>Morning Hours</h5>
+                            <p>11:00 AM - 1:00 PM</p>
+                            <p style="font-size: 0.875rem; color: var(--text-light);">Mon-Sat</p>
+                        </div>
+                        <div class="hours-card">
+                            <h5>Evening Hours</h5>
+                            <p>5:00 PM - 8:00 PM</p>
+                            <p style="font-size: 0.875rem; color: var(--text-light);">Mon-Sat</p>
+                        </div>
+                        <div class="hours-card">
+                            <h5>Sunday - Manipal Hospital</h5>
+                            <p>11:00 AM - 1:00 PM</p>
+                            <p style="font-size: 0.875rem; color: var(--text-light);">Sundays</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (simplified) -->
+    <section class="map-section" id="location">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Visit Us</div>
+                <h2>Our Location</h2>
+            </div>
+            <div class="map-grid">
+                <div id="map">
+                    <div class="map-loading">Interactive map loading...</div>
+                </div>
+                <div class="location-card">
+                    <h3>SK Health Clinic</h3>
+                    <div class="location-detail">
+                        <strong>Address</strong>
+                        <p>2 - A 19, Pocket B, Nehru Nagar II<br>
+                        Ghaziabad<br>
+                        Uttar Pradesh 201001</p>
+                    </div>
+                    <div class="location-detail">
+                        <strong>Doctor</strong>
+                        <p>Dr. Sanjeev Agarwal<br>
+                        General Physician<br>
+                        26+ Years Experience</p>
+                    </div>
+                    <a href="https://maps.google.com/?q=28.664477,77.4441578" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 2rem; width: 100%;">
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Testimonials</div>
+                <h2>Patient Reviews</h2>
+            </div>
+            <div class="reviews-track">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">RS</div>
+                        <div class="review-meta">
+                            <h4>Rajesh Sharma</h4>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="review-date">2 weeks ago</div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        Dr. Sanjeev Agarwal is an excellent physician. He listens patiently and explains 
+                        the treatment clearly. My family has been consulting him for years. 
+                        Highly recommended for general health issues.
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">PG</div>
+                        <div class="review-meta">
+                            <h4>Priya Gupta</h4>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="review-date">1 month ago</div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        Very experienced doctor with accurate diagnosis. The clinic is well-maintained 
+                        and hygienic. Dr. Agarwal's approach is practical and he doesn't prescribe 
+                        unnecessary medicines. Consultation is thorough.
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">AK</div>
+                        <div class="review-meta">
+                            <h4>Amit Kumar</h4>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="review-date">1 month ago</div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        Best general physician in Nehru Nagar area. Dr. Sanjeev has vast 
+                        experience and gives proper time to understand the problem. 
+                        My entire family consults him for all health concerns.
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">NM</div>
+                        <div class="review-meta">
+                            <h4>Neha Malhotra</h4>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="review-date">2 months ago</div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        Dr. Agarwal is very knowledgeable and caring. He explains everything in detail 
+                        and follows up on the treatment progress. The clinic location is convenient 
+                        for Nehru Nagar and nearby area residents.
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">VS</div>
+                        <div class="review-meta">
+                            <h4>Vikram Singh</h4>
+                            <div class="review-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <div class="review-date">3 months ago</div>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        Excellent doctor with decades of experience. Dr. Sanjeev's diagnosis is always 
+                        spot-on. He is patient, listens carefully, and provides practical health advice. 
+                        Truly trustworthy physician.
+                    </p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <div class="google-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.35 11.1h-9.2v3.7h5.3c-.2 1.2-.9 2.2-1.9 2.9-1 .6-2.2 1-3.5 1-2.7 0-5-1.8-5.8-4.3-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9c.8-2.5 3.1-4.3 5.8-4.3 1.5 0 2.8.5 3.9 1.5l2.8-2.8C17.1 3.4 14.8 2.6 12 2.6c-4.8 0-8.8 3.5-9.6 8.1-.1.6-.2 1.2-.2 1.8s.1 1.2.2 1.8c.8 4.6 4.8 8.1 9.6 8.1 5.3 0 9.5-3.5 9.5-9.5 0-.6-.1-1.2-.2-1.8z"/>
+                    </svg>
+                    4.8 rating • Google Reviews
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>SK Health Clinic</h3>
+                <p>Dr. Sanjeev Agarwal - General Physician with 26+ years of experience, 
+                   providing comprehensive healthcare services to families in Nehru Nagar and surrounding areas of Ghaziabad.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">General Medicine</a></li>
+                    <li><a href="#">Health Checkups</a></li>
+                    <li><a href="#">Family Healthcare</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SK Health Clinic. All rights reserved. | Website: skhealth.in</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918700491681" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3.04 1.04 4.34L2 22l5.66-1.04c1.3.68 2.8 1.04 4.34 1.04 5.52 0 10-4.48 10-10S17.52 2 12 2zm5.88 14.12c-.25.7-.99 1.32-1.62 1.5-.43.11-.99.2-2.88-.62-2.43-1.05-3.99-3.47-4.11-3.63-.12-.16-1-1.33-1-2.54 0-1.21.63-1.8.86-2.05.22-.25.49-.31.65-.31l.46.01c.15 0 .35-.06.55.42.2.49.68 1.68.75 1.8.06.12.1.27.02.43-.08.16-.12.27-.25.41-.12.14-.26.32-.37.43-.11.11-.23.23-.1.46.13.23.58 1.02 1.25 1.64.86.81 1.58 1.06 1.81 1.18.23.12.36.1.49-.06.13-.16.56-.65.71-.88.15-.23.3-.19.5-.11.2.08 1.29.61 1.51.72.22.11.37.16.42.25.06.09.06.52-.19 1.21z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Global flag to prevent multiple map initializations
+        let mapLoaded = false;
+
+        // Load Google Maps API securely via Cloudflare Function
+        async function loadGoogleMaps() {
+          if (mapLoaded) return; // Prevent duplicate loads
+
+          try {
+            // Fetch API key from secure server-side endpoint
+            const response = await fetch('/api/maps-config');
+
+            if (!response.ok) {
+              throw new Error(`API config fetch failed: ${response.status}`);
+            }
+
+            const { mapsApiKey } = await response.json();
+
+            if (!mapsApiKey) {
+              throw new Error('No API key received from server');
+            }
+
+            // Load Maps API dynamically
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${mapsApiKey}&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            script.onerror = () => {
+              console.error('Failed to load Google Maps script');
+              showMapFallback();
+            };
+
+            mapLoaded = true;
+            document.head.appendChild(script);
+
+          } catch (error) {
+            console.error('Maps loading error:', error);
+            showMapFallback();
+          }
+        }
+
+        // Initialize map (called by Google Maps API via callback)
+        function initMap() {
+            const clinicLocation = { lat: 28.664477, lng: 77.4441578 };
+            
+            const mapStyles = [
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"weight": "2.00"}]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#9c9c9c"}]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [{"visibility": "on"}]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [{"color": "#f2f2f2"}]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "off"}]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [{"saturation": -100}, {"lightness": 45}]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{"color": "#e6f0ff"}, {"visibility": "on"}]
+                }
+            ];
+
+            try {
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 16,
+                    center: clinicLocation,
+                    styles: mapStyles,
+                    disableDefaultUI: false,
+                    zoomControl: true,
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    rotateControl: false,
+                    fullscreenControl: true,
+                    gestureHandling: 'cooperative' // Better mobile UX
+                });
+
+                const marker = new google.maps.Marker({
+                    position: clinicLocation,
+                    map: map,
+                    title: "SK Health Clinic - Dr. Sanjeev Agarwal, General Physician",
+                    animation: google.maps.Animation.DROP
+                });
+
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `
+                        <div style="padding: 15px; font-family: 'Inter', sans-serif;">
+                            <h3 style="margin: 0 0 10px; color: #1a1a1a;">SK Health Clinic</h3>
+                            <p style="margin: 5px 0; color: #666;">Dr. Sanjeev Agarwal</p>
+                            <p style="margin: 5px 0; color: #666;">General Physician</p>
+                            <p style="margin: 5px 0; color: #666;">2 - A 19, Pocket B, Nehru Nagar II</p>
+                            <p style="margin: 5px 0; color: #666;">Ghaziabad, UP 201001</p>
+                            <a href="https://maps.google.com/?q=28.664477,77.4441578"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               style="color: #5B828A; text-decoration: none; font-weight: 500;">Get Directions →</a>
+                        </div>
+                    `
+                });
+
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+
+                // Show info window by default after a short delay
+                setTimeout(() => {
+                    infoWindow.open(map, marker);
+                }, 1000);
+
+            } catch (error) {
+                console.error('Map initialization error:', error);
+                showMapFallback();
+            }
+        }
+
+        // Fallback UI if map fails to load
+        function showMapFallback() {
+            const mapDiv = document.getElementById('map');
+            if (!mapDiv) return;
+
+            mapDiv.innerHTML = `
+                <div style="height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; background: #fafafa;">
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#5B828A" stroke-width="2" style="margin-bottom: 1rem;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <p style="color: #1a1a1a; font-weight: 500; font-size: 1.125rem; margin-bottom: 0.5rem;">SK Health Clinic</p>
+                        <p style="color: #666; margin-bottom: 1rem;">2 - A 19, Pocket B, Nehru Nagar II<br>Ghaziabad, UP 201001</p>
+                        <a href="https://maps.google.com/?q=28.664477,77.4441578"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-primary">
+                            View on Google Maps
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Global error handler for Maps API authentication failures
+        window.gm_authFailure = showMapFallback;
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.hours-card, .contact-cta-card, .review-card');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(el);
+            });
+        });
+
+        // Load map when page is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadGoogleMaps);
+        } else {
+            loadGoogleMaps();
+        }
+    </script>
+</body>
+</html>
