@@ -533,36 +533,38 @@
             const currentScroll = window.scrollY;
 
             if (currentScroll > 100) {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                header.classList.add('scrolled');
             } else {
-                header.style.boxShadow = 'none';
+                header.classList.remove('scrolled');
             }
 
             lastScroll = currentScroll;
         });
 
-        // Intersection Observer for fade-in animations
+        // Intersection Observer for fade-in animations with enhanced effects
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
                 }
             });
         }, observerOptions);
 
         // Observe elements
         document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.hours-card, .contact-cta-card, .review-card');
+            const elements = document.querySelectorAll('.hours-card, .contact-cta-card, .review-card, .location-main-card');
             elements.forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
-                el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                el.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
                 observer.observe(el);
             });
         });
