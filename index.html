@@ -14,16 +14,19 @@
     <!-- Open Graph tags for social media sharing (Facebook, LinkedIn) -->
     <meta property="og:title" content="SK Health Clinic - Dr. Sanjeev Agarwal | General Physician Ghaziabad">
     <meta property="og:description" content="Experienced General Physician in Nehru Nagar with over 26 years of practice. Comprehensive family healthcare services. Mon-Sat: 11AM-1PM, 6PM-8PM.">
-    <meta property="og:image" content="https://skhealth.github.io/skhealth-logo.png">
-    <meta property="og:url" content="https://skhealth.github.io">
+    <meta property="og:image" content="https://skhealth.github.io/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://skhealth.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="SK Health Clinic">
 
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SK Health Clinic - Dr. Sanjeev Agarwal">
     <meta name="twitter:description" content="Experienced General Physician in Ghaziabad with over 26 years of practice. Book consultation today.">
-    <meta name="twitter:image" content="https://skhealth.github.io/skhealth-logo.png">
+    <meta name="twitter:image" content="https://skhealth.github.io/og-image.jpg">
 
     <!-- Additional SEO tags -->
     <meta name="robots" content="index, follow">
@@ -41,15 +44,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="https://maps.googleapis.com">
-</head>
-<body>
-    <!-- Skip link for keyboard/screen reader users -->
-    <a href="#home" class="skip-link">Skip to main content</a>
+    <!-- Canonical URL - prevents equity split between domains -->
+    <link rel="canonical" href="https://skhealth.github.io/">
 
-    <!-- Header -->
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+    <!-- Theme color for Android Chrome address bar -->
+    <meta name="theme-color" content="#2563eb">
 </head>
 <body>
     <!-- Skip link for keyboard/screen reader users -->
@@ -61,8 +64,10 @@
             <div class="logo">SK<span>Health</span></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#location">Location</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#reviews">Reviews</a></li>
             </ul>
             <button class="menu-toggle"
@@ -102,13 +107,17 @@
             <div class="hero-image">
                 <div class="hero-image-wrapper">
                     <div class="hero-doctor-card">
-                        <img src="./sanjeev-hero.png"
-                             alt="Dr. Sanjeev Agarwal - General Physician with over 26 years of experience"
-                             width="400"
-                             height="600"
-                             loading="eager"
-                             decoding="async"
-                             class="doctor-portrait">
+                        <picture>
+                            <source srcset="./sanjeev-hero.webp" type="image/webp">
+                            <img src="./sanjeev-hero.png"
+                                 alt="Dr. Sanjeev Agarwal - General Physician with over 26 years of experience"
+                                 width="400"
+                                 height="600"
+                                 loading="eager"
+                                 fetchpriority="high"
+                                 decoding="async"
+                                 class="doctor-portrait">
+                        </picture>
                         <div class="doctor-badge">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 9h-4v4h-4v-4H6v-4h4V4h4v4h4v4z"/>
@@ -117,13 +126,16 @@
                         </div>
                     </div>
                     <div class="hero-facility-card">
-                        <img src="./exterior.png"
-                             alt="SK Health Clinic - Professional medical facility in Nehru Nagar"
-                             width="500"
-                             height="300"
-                             loading="lazy"
-                             decoding="async"
-                             class="facility-image">
+                        <picture>
+                            <source srcset="./exterior.webp" type="image/webp">
+                            <img src="./exterior.png"
+                                 alt="SK Health Clinic - Professional medical facility in Nehru Nagar"
+                                 width="500"
+                                 height="300"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="facility-image">
+                        </picture>
                         <div class="facility-badge">
                             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -131,6 +143,90 @@
                             <span>Nehru Nagar, Ghaziabad</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions / Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">What We Treat</div>
+                <h2>Conditions We Treat</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Fever &amp; Viral Infections</h3>
+                    <p>Accurate diagnosis and treatment for fever, flu, viral and bacterial infections affecting all age groups.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 9h-4v4h-4v-4H6v-4h4V4h4v4h4v4z"/>
+                        </svg>
+                    </div>
+                    <h3>Diabetes Management</h3>
+                    <p>Comprehensive diabetes care including blood sugar monitoring, medication management, and lifestyle counselling.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3>Hypertension / Blood Pressure</h3>
+                    <p>Diagnosis and long-term management of high blood pressure to reduce risk of heart disease and stroke.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Thyroid Disorders</h3>
+                    <p>Evaluation and treatment for hypothyroidism and hyperthyroidism with ongoing monitoring and medication review.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8z"/>
+                        </svg>
+                    </div>
+                    <h3>Respiratory Problems</h3>
+                    <p>Treatment for cough, asthma, bronchitis, and seasonal respiratory infections with effective care plans.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                        </svg>
+                    </div>
+                    <h3>Preventive Health Checkups</h3>
+                    <p>Routine health screenings and checkups to detect conditions early and maintain long-term wellbeing.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Chronic Disease Management</h3>
+                    <p>Ongoing care and management plans for long-term conditions ensuring quality of life and symptom control.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Pediatric &amp; Elderly Care</h3>
+                    <p>Compassionate healthcare for children and senior citizens, addressing age-specific health concerns with expertise.</p>
                 </div>
             </div>
         </div>
@@ -265,6 +361,42 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Common Questions</div>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What are the clinic timings for Dr. Sanjeev Agarwal?</summary>
+                    <p>SK Health Clinic is open <strong>Monday to Saturday</strong>: 11:00 AM – 1:00 PM and 6:00 PM – 8:00 PM. Sunday is by appointment only.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does SK Health Clinic treat diabetes and blood pressure?</summary>
+                    <p>Yes. Diabetes management and hypertension (blood pressure) treatment are core services. Dr. Sanjeev Agarwal provides diagnosis, medication management, and ongoing monitoring for both conditions.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is walk-in consultation available?</summary>
+                    <p>Yes, walk-in patients are welcome during regular consultation hours (11 AM–1 PM and 6 PM–8 PM, Monday to Saturday). No prior appointment needed.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I book an appointment?</summary>
+                    <p>Call or WhatsApp Dr. Sanjeev Agarwal at <strong>+91 87004 91681</strong>, or send an email to support@skhealth.co.in. You can also walk in during consultation hours.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Where is SK Health Clinic located in Ghaziabad?</summary>
+                    <p>SK Health Clinic is located at <strong>2-A 19, Pocket B, Nehru Nagar II, Ghaziabad, Uttar Pradesh 201001</strong>. It is easily accessible from Nehru Nagar and nearby areas.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What conditions does Dr. Sanjeev Agarwal treat?</summary>
+                    <p>Dr. Agarwal treats fever and viral infections, diabetes, hypertension, thyroid disorders, respiratory problems (cough, asthma), and provides preventive health checkups and chronic disease management for all age groups including children and senior citizens.</p>
+                </details>
             </div>
         </div>
     </section>
@@ -411,8 +543,10 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#location">Location</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>
             </div>
@@ -427,7 +561,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 SK Health Clinic. All rights reserved. | Website: skhealth.in</p>
+            <p>&copy; 2026 SK Health Clinic. All rights reserved. | Website: skhealth.in</p>
         </div>
     </footer>
 
@@ -435,47 +569,127 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "SK Health Clinic",
-      "description": "General Physician and Family Healthcare Services in Nehru Nagar, Ghaziabad",
-      "image": "https://skhealth.github.io/skhealth-logo.png",
-      "url": "https://skhealth.github.io",
-      "telephone": "+918700491681",
-      "email": "support@skhealth.co.in",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2 - A 19, Pocket B, Nehru Nagar II",
-        "addressLocality": "Ghaziabad",
-        "addressRegion": "Uttar Pradesh",
-        "postalCode": "201001",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 28.664477,
-        "longitude": 77.4441578
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "11:00",
-          "closes": "13:00"
+          "@type": "MedicalClinic",
+          "@id": "https://skhealth.github.io/#clinic",
+          "name": "SK Health Clinic",
+          "description": "General Physician and Family Healthcare Services in Nehru Nagar, Ghaziabad",
+          "image": "https://skhealth.github.io/skhealth-logo.png",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://skhealth.github.io/skhealth-logo.png",
+            "width": 200,
+            "height": 200
+          },
+          "url": "https://skhealth.github.io/",
+          "telephone": "+918700491681",
+          "email": "support@skhealth.co.in",
+          "isAcceptingNewPatients": true,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2 - A 19, Pocket B, Nehru Nagar II",
+            "addressLocality": "Ghaziabad",
+            "addressRegion": "Uttar Pradesh",
+            "postalCode": "201001",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 28.664477,
+            "longitude": 77.4441578
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "11:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "18:00",
+              "closes": "20:00"
+            }
+          ],
+          "priceRange": "$$",
+          "medicalSpecialty": "General Practice",
+          "areaServed": [
+            { "@type": "City", "name": "Ghaziabad" },
+            { "@type": "Neighborhood", "name": "Nehru Nagar" }
+          ],
+          "availableService": [
+            { "@type": "MedicalTherapy", "name": "Diabetes Management" },
+            { "@type": "MedicalTherapy", "name": "Hypertension Treatment" },
+            { "@type": "MedicalProcedure", "name": "General Health Checkup" },
+            { "@type": "MedicalTherapy", "name": "Fever and Infection Treatment" },
+            { "@type": "MedicalTherapy", "name": "Thyroid Disorder Management" },
+            { "@type": "MedicalTherapy", "name": "Family Healthcare" }
+          ]
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "18:00",
-          "closes": "20:00"
+          "@type": "Physician",
+          "@id": "https://skhealth.github.io/#doctor",
+          "name": "Dr. Sanjeev Agarwal",
+          "medicalSpecialty": "General Practice",
+          "worksFor": { "@id": "https://skhealth.github.io/#clinic" },
+          "knowsAbout": ["Fever", "Diabetes", "Hypertension", "Thyroid Disorders", "Family Medicine", "Preventive Care"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are the clinic timings for Dr. Sanjeev Agarwal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SK Health Clinic is open Monday to Saturday: 11:00 AM – 1:00 PM and 6:00 PM – 8:00 PM. Sunday by appointment only."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does SK Health Clinic treat diabetes and blood pressure?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Diabetes management and hypertension (blood pressure) treatment are core services provided by Dr. Sanjeev Agarwal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is walk-in consultation available?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, walk-in patients are welcome during consultation hours (11 AM–1 PM and 6 PM–8 PM, Monday to Saturday)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I book an appointment at SK Health Clinic?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Call or WhatsApp Dr. Sanjeev Agarwal at +91 87004 91681, or email support@skhealth.co.in."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is SK Health Clinic located in Ghaziabad?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SK Health Clinic is located at 2-A 19, Pocket B, Nehru Nagar II, Ghaziabad, Uttar Pradesh 201001."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What conditions does Dr. Sanjeev Agarwal treat?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dr. Sanjeev Agarwal treats fever and viral infections, diabetes, hypertension, thyroid disorders, respiratory problems, and provides preventive health checkups and chronic disease management for all age groups."
+              }
+            }
+          ]
         }
-      ],
-      "priceRange": "$$",
-      "medicalSpecialty": "General Practice",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "50"
-      }
+      ]
     }
     </script>
 
@@ -539,7 +753,7 @@
             }
 
             lastScroll = currentScroll;
-        });
+        }, { passive: true });
 
         // Intersection Observer for fade-in animations with enhanced effects
         const observerOptions = {
