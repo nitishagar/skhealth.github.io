@@ -1204,7 +1204,7 @@
 /* ── Services / Conditions Section ──────────────────────────────────────── */
 .services-section {
     padding: 5rem 0;
-    background: var(--bg-primary);
+    background: var(--bg-white);
 }
 
 .services-grid {
@@ -1215,8 +1215,8 @@
 }
 
 .service-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    background: var(--bg-light);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 1.75rem 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -1224,20 +1224,20 @@
 
 .service-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
-    border-color: var(--primary-color);
+    box-shadow: 0 8px 24px rgba(13, 148, 136, 0.15);
+    border-color: var(--accent);
 }
 
 .service-icon {
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    background: linear-gradient(135deg, var(--accent-light), #ccfbf1);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--accent);
 }
 
 .service-card h3 {
@@ -1270,7 +1270,7 @@
 /* ── FAQ Section ─────────────────────────────────────────────────────────── */
 .faq-section {
     padding: 5rem 0;
-    background: var(--bg-secondary);
+    background: var(--bg-light);
 }
 
 .faq-list {
@@ -1284,15 +1284,15 @@
 }
 
 .faq-item {
-    background: var(--bg-primary);
-    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     transition: border-color 0.2s ease;
 }
 
 .faq-item[open] {
-    border-color: var(--primary-color);
+    border-color: var(--accent);
 }
 
 .faq-item summary {
@@ -1317,7 +1317,7 @@
     content: '+';
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--primary-color);
+    color: var(--accent);
     flex-shrink: 0;
     transition: transform 0.2s ease;
 }
@@ -1327,7 +1327,7 @@
 }
 
 .faq-item summary:hover {
-    color: var(--primary-color);
+    color: var(--accent);
 }
 
 .faq-item p {
@@ -1336,5 +1336,201 @@
     line-height: 1.7;
     padding: 0 1.5rem 1.25rem;
     margin: 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border);
+}
+
+/* ── Doctors Section ─────────────────────────────────────────────────────── */
+.doctors-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.section-intro {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0.75rem auto 0;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.doctor-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.doctor-card__badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.875rem;
+    border-radius: 100px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.doctor-card__badge--founder {
+    background: rgba(13, 148, 136, 0.92);
+    color: #ffffff;
+}
+
+.doctor-card__badge--specialist {
+    background: rgba(37, 99, 235, 0.92);
+    color: #ffffff;
+}
+
+.doctor-card__portrait-wrap {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: linear-gradient(160deg, #f0fdfa 0%, #e0f2fe 100%);
+}
+
+.doctor-card__portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.doctor-card:hover .doctor-card__portrait {
+    transform: scale(1.03);
+}
+
+.doctor-card__body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    flex: 1;
+}
+
+.doctor-card__name {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.doctor-card__quals {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.doctor-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.doctor-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+}
+
+.doctor-tag--teal {
+    background: var(--accent-light);
+    color: var(--accent-dark);
+}
+
+.doctor-tag--blue {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.doctor-card__stat {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.doctor-card__stat svg {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+    color: var(--accent);
+}
+
+.doctor-card--specialist .doctor-card__stat svg {
+    color: #2563eb;
+}
+
+.doctor-card__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 0.25rem;
+}
+
+.doctor-card__cta {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+}
+
+.doctor-card__cta--ext {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.doctor-card--specialist .btn-primary {
+    background: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.doctor-card--specialist .btn-primary:hover {
+    background: #1d4ed8;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+@media (max-width: 768px) {
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
