@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK Health Clinic | General Physician &amp; Urologist in Ghaziabad, Nehru Nagar</title>
+    <title>General Physician &amp; Urologist, Nehru Nagar Ghaziabad | SK Health</title>
 
     <!-- Meta Description - appears in search results -->
-    <meta name="description" content="SK Health Clinic, Nehru Nagar Ghaziabad — Dr. Sanjeev Agarwal (General Physician, 26+ years) and Dr. Keshav Agarwal (AIIMS Gold Medalist Urologist). Family medicine, diabetes, hypertension, kidney stones, robotic urology. Call: +91 87004 91681.">
-
-    <!-- Keywords for search engines -->
-    <meta name="keywords" content="general physician ghaziabad, doctor nehru nagar, sk health clinic, dr sanjeev agarwal, family doctor ghaziabad, general medicine, urologist ghaziabad, urologist nehru nagar, dr keshav agarwal, kidney stone treatment ghaziabad, urology clinic ghaziabad, robotic surgery ghaziabad">
+    <meta name="description" content="SK Health Clinic, Nehru Nagar Ghaziabad. General Physician Dr. Sanjeev Agarwal and AIIMS Urologist Dr. Keshav Agarwal. Call +91 87004 91681.">
 
     <!-- Open Graph tags for social media sharing (Facebook, LinkedIn) -->
     <meta property="og:title" content="SK Health Clinic | General Medicine &amp; Urology, Ghaziabad">
@@ -36,8 +33,13 @@
     <meta name="geo.position" content="28.664477;77.4441578">
     <meta name="ICBM" content="28.664477, 77.4441578">
 
+    <!-- LCP hero preload -->
+    <link rel="preload" as="image" type="image/webp" href="hero-sanjeev-800.webp" fetchpriority="high"
+          imagesrcset="hero-sanjeev-480.webp 480w, hero-sanjeev-800.webp 800w, hero-sanjeev-1200.webp 1200w"
+          imagesizes="(max-width: 800px) 100vw, 400px">
+
     <!-- External stylesheet for better caching -->
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=2026050201">
 
     <!-- Preconnect to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +52,7 @@
     <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
 
     <!-- Theme color for Android Chrome address bar -->
     <meta name="theme-color" content="#2563eb">
@@ -69,7 +72,6 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#reviews">Reviews</a></li>
             </ul>
             <button class="menu-toggle"
                     id="menuToggle"
@@ -84,13 +86,13 @@
     </header>
 
     <!-- Hero Section with animated background -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-label="Hero">
         <div class="hero-bg-shape"></div>
         <div class="hero-bg-shape"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">Dr. Sanjeev Agarwal • Over 26 Years Experience</div>
-                <h1>Expert Medical Care<br>in Ghaziabad</h1>
+                <h1>General Physician &amp; Urologist in Nehru Nagar, Ghaziabad — SK Health Clinic</h1>
                 <p class="hero-description">
                     Your trusted family doctor in Nehru Nagar. SK Health offers comprehensive care —
                     from routine check-ups and chronic disease management to advanced urology.
@@ -109,8 +111,9 @@
                 <div class="hero-image-wrapper">
                     <div class="hero-doctor-card">
                         <picture>
-                            <source srcset="./sanjeev-hero.webp" type="image/webp">
-                            <img src="./sanjeev-hero.png"
+                            <source type="image/avif" srcset="hero-sanjeev-480.avif 480w, hero-sanjeev-800.avif 800w, hero-sanjeev-1200.avif 1200w" sizes="(max-width: 800px) 100vw, 400px">
+                            <source type="image/webp" srcset="hero-sanjeev-480.webp 480w, hero-sanjeev-800.webp 800w, hero-sanjeev-1200.webp 1200w" sizes="(max-width: 800px) 100vw, 400px">
+                            <img src="hero-sanjeev-800.webp"
                                  alt="Dr. Sanjeev Agarwal - General Physician with over 26 years of experience"
                                  width="400"
                                  height="600"
@@ -120,7 +123,7 @@
                                  class="doctor-portrait">
                         </picture>
                         <div class="doctor-badge">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 9h-4v4h-4v-4H6v-4h4V4h4v4h4v4z"/>
                             </svg>
                             <span>26+ Years</span>
@@ -128,8 +131,9 @@
                     </div>
                     <div class="hero-facility-card">
                         <picture>
-                            <source srcset="./exterior.webp" type="image/webp">
-                            <img src="./exterior.png"
+                            <source type="image/avif" srcset="exterior-640.avif 640w, exterior-1024.avif 1024w, exterior-1600.avif 1600w" sizes="(max-width: 800px) 100vw, 500px">
+                            <source type="image/webp" srcset="exterior-640.webp 640w, exterior-1024.webp 1024w, exterior-1600.webp 1600w" sizes="(max-width: 800px) 100vw, 500px">
+                            <img src="exterior-1024.webp"
                                  alt="SK Health Clinic - Professional medical facility in Nehru Nagar"
                                  width="500"
                                  height="300"
@@ -138,7 +142,7 @@
                                  class="facility-image">
                         </picture>
                         <div class="facility-badge">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                             </svg>
                             <span>Nehru Nagar, Ghaziabad</span>
@@ -150,22 +154,23 @@
     </section>
 
     <!-- Meet Our Doctors Section -->
-    <section class="doctors-section" id="doctors">
+    <section class="doctors-section" id="doctors" aria-labelledby="doctors-heading">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Our Team</div>
-                <h2>Meet Our Doctors</h2>
+                <h2 id="doctors-heading">Meet Our Doctors</h2>
                 <p class="section-intro">Expert care across General Medicine and Advanced Urology — under one roof at Nehru Nagar, Ghaziabad.</p>
             </div>
             <div class="doctors-grid">
 
                 <!-- Dr. Sanjeev Agarwal — Primary Doctor -->
-                <div class="doctor-card doctor-card--primary">
+                <div class="doctor-card doctor-card--primary fade-init">
                     <div class="doctor-card__badge doctor-card__badge--founder">Founder &amp; General Physician</div>
                     <div class="doctor-card__portrait-wrap">
                         <picture>
-                            <source srcset="./sanjeev-hero.webp" type="image/webp">
-                            <img src="./sanjeev-hero.png"
+                            <source type="image/avif" srcset="hero-sanjeev-480.avif 480w, hero-sanjeev-800.avif 800w" sizes="(max-width: 800px) 100vw, 400px">
+                            <source type="image/webp" srcset="hero-sanjeev-480.webp 480w, hero-sanjeev-800.webp 800w" sizes="(max-width: 800px) 100vw, 400px">
+                            <img src="hero-sanjeev-800.webp"
                                  alt="Dr. Sanjeev Agarwal - Founder and General Physician at SK Health Clinic"
                                  width="400" height="600"
                                  loading="lazy"
@@ -182,7 +187,7 @@
                             <span class="doctor-tag doctor-tag--teal">Chronic Disease</span>
                         </div>
                         <div class="doctor-card__stat">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 9h-4v4h-4v-4H6v-4h4V4h4v4h4v4z"/>
                             </svg>
                             <span>26+ Years of Practice · Serving since 1998</span>
@@ -194,16 +199,18 @@
                 </div>
 
                 <!-- Dr. Keshav Agarwal — Specialist -->
-                <div class="doctor-card doctor-card--specialist">
+                <div class="doctor-card doctor-card--specialist fade-init">
                     <div class="doctor-card__badge doctor-card__badge--specialist">Consultant Urologist</div>
                     <div class="doctor-card__portrait-wrap">
-                        <!-- Image pinned to keshav.uro.github.io@985a6e1 via jsDelivr CDN -->
-                        <img src="https://cdn.jsdelivr.net/gh/nitishagar/keshav.uro.github.io@985a6e1/images/Dr.%20Keshav%20Agarwal%20Front.jpg"
-                             alt="Dr. Keshav Agarwal - AIIMS Gold Medalist Consultant Urologist"
-                             width="400" height="600"
-                             loading="lazy"
-                             decoding="async"
-                             class="doctor-card__portrait">
+                        <picture>
+                            <source type="image/webp" srcset="dr-keshav-front-400.webp">
+                            <img src="dr-keshav-front-400.webp"
+                                 alt="Dr. Keshav Agarwal - AIIMS Gold Medalist Consultant Urologist"
+                                 width="400" height="600"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="doctor-card__portrait">
+                        </picture>
                     </div>
                     <div class="doctor-card__body">
                         <h3 class="doctor-card__name">Dr. Keshav Agarwal</h3>
@@ -214,7 +221,7 @@
                             <span class="doctor-tag doctor-tag--blue">Minimally Invasive</span>
                         </div>
                         <div class="doctor-card__stat">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
                             <span>Dual AIIMS Gold Medalist · AUA Travel Fellow 2023</span>
@@ -240,16 +247,16 @@
     </section>
 
     <!-- Conditions / Services Section -->
-    <section class="services-section" id="services">
+    <section class="services-section" id="services" aria-labelledby="services-heading">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">What We Treat</div>
-                <h2>Conditions We Treat</h2>
+                <h2 id="services-heading">Conditions We Treat</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
                         </svg>
                     </div>
@@ -258,7 +265,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 9h-4v4h-4v-4H6v-4h4V4h4v4h4v4z"/>
                         </svg>
                     </div>
@@ -267,7 +274,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                     </div>
@@ -276,7 +283,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
                     </div>
@@ -285,7 +292,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8z"/>
                         </svg>
                     </div>
@@ -294,7 +301,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                         </svg>
                     </div>
@@ -303,7 +310,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/>
                         </svg>
                     </div>
@@ -312,7 +319,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                         </svg>
                     </div>
@@ -324,45 +331,67 @@
     </section>
 
     <!-- Contact Section (moved before location) -->
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Get in Touch</div>
-                <h2>Book Your Consultation</h2>
+                <h2 id="contact-heading">Book Your Consultation</h2>
             </div>
             <div class="contact-content">
                 <div class="contact-main">
                     <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
-                        Schedule your appointment with Dr. Sanjeev Agarwal today.<br>
-                        Choose your preferred method to connect with us.
+                        Schedule your appointment with Dr. Sanjeev Agarwal (General Physician)
+                        or Dr. Keshav Agarwal (Urologist). Choose your preferred method to connect with us.
                     </p>
-                    
+
                     <div class="contact-cta-group">
-                        <a href="https://wa.me/918700491681" target="_blank" rel="noopener noreferrer" class="contact-cta-card" style="text-decoration: none;">
-                            <div class="cta-icon">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="https://wa.me/918700491681?text=Hello%20Dr.%20Sanjeev,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="contact-cta-card fade-init" style="text-decoration: none;">
+                            <div class="cta-icon" aria-hidden="true">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                                 </svg>
                             </div>
-                            <h4>WhatsApp</h4>
-                            <p>Quick & Easy</p>
-                            <div class="number">Message Us</div>
-                        </a>
-                        
-                        <a href="tel:+918700491681" class="contact-cta-card" style="text-decoration: none;">
-                            <div class="cta-icon">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-                                </svg>
-                            </div>
-                            <h4>Call Now</h4>
-                            <p>Direct Booking</p>
+                            <h4>WhatsApp Dr. Sanjeev</h4>
+                            <p>General Physician</p>
                             <div class="number">+91 87004 91681</div>
                         </a>
 
-                        <a href="mailto:support@skhealth.co.in" class="contact-cta-card" style="text-decoration: none;">
-                            <div class="cta-icon">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="https://wa.me/919818442016?text=Hello%20Dr.%20Keshav,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="contact-cta-card fade-init" style="text-decoration: none;">
+                            <div class="cta-icon" aria-hidden="true">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                            </div>
+                            <h4>WhatsApp Dr. Keshav</h4>
+                            <p>Urologist</p>
+                            <div class="number">+91 98184 42016</div>
+                        </a>
+
+                        <a href="tel:+918700491681" class="contact-cta-card fade-init" style="text-decoration: none;">
+                            <div class="cta-icon" aria-hidden="true">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                                </svg>
+                            </div>
+                            <h4>Call Dr. Sanjeev</h4>
+                            <p>General Physician</p>
+                            <div class="number">+91 87004 91681</div>
+                        </a>
+
+                        <a href="tel:+919818442016" class="contact-cta-card fade-init" style="text-decoration: none;">
+                            <div class="cta-icon" aria-hidden="true">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                                </svg>
+                            </div>
+                            <h4>Call Dr. Keshav</h4>
+                            <p>Urologist</p>
+                            <div class="number">+91 98184 42016</div>
+                        </a>
+
+                        <a href="mailto:support@skhealth.co.in" class="contact-cta-card fade-init" style="text-decoration: none;">
+                            <div class="cta-icon" aria-hidden="true">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                 </svg>
                             </div>
@@ -373,17 +402,17 @@
                     </div>
                     
                     <div class="contact-hours">
-                        <div class="hours-card">
+                        <div class="hours-card fade-init">
                             <h5>Morning Consultation</h5>
                             <p>11:00 AM - 1:00 PM</p>
                             <p style="font-size: 0.875rem; color: var(--text-light);">Monday - Saturday</p>
                         </div>
-                        <div class="hours-card">
+                        <div class="hours-card fade-init">
                             <h5>Evening Consultation</h5>
                             <p>6:00 PM - 8:00 PM</p>
                             <p style="font-size: 0.875rem; color: var(--text-light);">Monday - Saturday</p>
                         </div>
-                        <div class="hours-card">
+                        <div class="hours-card fade-init">
                             <h5>Sunday</h5>
                             <p>Closed</p>
                             <p style="font-size: 0.875rem; color: var(--text-light);">By Appointment Only</p>
@@ -395,16 +424,16 @@
     </section>
 
     <!-- Location Section (Clean & Simple) -->
-    <section class="location-section" id="location">
+    <section class="location-section" id="location" aria-labelledby="location-heading">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Visit Us</div>
-                <h2>Our Location</h2>
+                <h2 id="location-heading">Our Location</h2>
             </div>
             <div class="location-content">
-                <div class="location-main-card">
+                <div class="location-main-card fade-init">
                     <div class="location-icon">
-                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
                     </div>
@@ -415,19 +444,19 @@
                     </div>
                     <div class="location-doctor-info">
                         <div class="doctor-info-item">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                             </svg>
                             <span>Dr. Sanjeev Agarwal</span>
                         </div>
                         <div class="doctor-info-item">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                             </svg>
                             <span>General Physician</span>
                         </div>
                         <div class="doctor-info-item">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
                             </svg>
                             <span>Over 26 Years Experience</span>
@@ -438,14 +467,14 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            class="btn btn-primary">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                                 <circle cx="12" cy="10" r="3"/>
                             </svg>
                             Open in Google Maps
                         </a>
                         <a href="tel:+918700491681" class="btn btn-secondary">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
                             </svg>
                             Call Now
@@ -457,174 +486,41 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Common Questions</div>
-                <h2>Frequently Asked Questions</h2>
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
             </div>
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary>What are the clinic timings for Dr. Sanjeev Agarwal?</summary>
-                    <p>SK Health Clinic is open <strong>Monday to Saturday</strong>: 11:00 AM – 1:00 PM and 6:00 PM – 8:00 PM. Sunday is by appointment only.</p>
+                    <summary class="faq-q">What are SK Health Clinic's consultation hours?</summary>
+                    <p>SK Health Clinic is open <strong>Monday to Saturday</strong>. Dr. Sanjeev Agarwal (General Physician) consults 11:00 AM – 1:00 PM and 6:00 PM – 8:00 PM. Dr. Keshav Agarwal (Urologist) consults at Nehru Nagar on Monday, Wednesday &amp; Friday evenings, and at the SK Health premises on Tuesday, Thursday &amp; Saturday. Sunday is by appointment only.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Does SK Health Clinic treat diabetes and blood pressure?</summary>
+                    <summary class="faq-q">Does SK Health Clinic treat diabetes and blood pressure?</summary>
                     <p>Yes. Diabetes management and hypertension (blood pressure) treatment are core services. Dr. Sanjeev Agarwal provides diagnosis, medication management, and ongoing monitoring for both conditions.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Is walk-in consultation available?</summary>
+                    <summary class="faq-q">Is walk-in consultation available?</summary>
                     <p>Yes, walk-in patients are welcome during regular consultation hours (11 AM–1 PM and 6 PM–8 PM, Monday to Saturday). No prior appointment needed.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>How do I book an appointment?</summary>
-                    <p>Call or WhatsApp Dr. Sanjeev Agarwal at <strong>+91 87004 91681</strong>, or send an email to support@skhealth.co.in. You can also walk in during consultation hours.</p>
+                    <summary class="faq-q">How do I book an appointment at SK Health Clinic?</summary>
+                    <p>For General Medicine, call or WhatsApp Dr. Sanjeev Agarwal at <strong>+91 87004 91681</strong>. For Urology, call or WhatsApp Dr. Keshav Agarwal at <strong>+91 98184 42016</strong>. You can also email support@skhealth.co.in or walk in during consultation hours.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Where is SK Health Clinic located in Ghaziabad?</summary>
+                    <summary class="faq-q">Who is the urologist at SK Health?</summary>
+                    <p>Dr. Keshav Agarwal — AIIMS New Delhi (MBBS, MS Surgery, M.Ch. Urology), DrNB Urology, MRCS — is the consultant urologist. He specialises in robotic surgery, kidney transplantation, kidney stones and urological oncology. He consults at the Nehru Nagar clinic on Monday, Wednesday &amp; Friday, and at SK Health on Tuesday, Thursday &amp; Saturday. Visit <a href="https://uro-care.com/" target="_blank" rel="noopener noreferrer">uro-care.com</a> for his full profile.</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q">Where is SK Health Clinic located in Ghaziabad?</summary>
                     <p>SK Health Clinic is located at <strong>2-A 19, Pocket B, Nehru Nagar II, Ghaziabad, Uttar Pradesh 201001</strong>. It is easily accessible from Nehru Nagar and nearby areas.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>What conditions does Dr. Sanjeev Agarwal treat?</summary>
+                    <summary class="faq-q">What conditions does Dr. Sanjeev Agarwal treat?</summary>
                     <p>Dr. Agarwal treats fever and viral infections, diabetes, hypertension, thyroid disorders, respiratory problems (cough, asthma), and provides preventive health checkups and chronic disease management for all age groups including children and senior citizens.</p>
                 </details>
-                <details class="faq-item">
-                    <summary>Is there a urologist at SK Health Clinic?</summary>
-                    <p>Yes. Dr. Keshav Agarwal, an AIIMS Dual Gold Medalist Urologist, provides urology
-                    consultations at Uro-Clinic, Nehru Nagar (same location). He specialises in robotic
-                    surgery, kidney transplantation, kidney stones, and urological oncology.
-                    Visit <a href="https://uro-care.com/" target="_blank" rel="noopener noreferrer">uro-care.com</a>
-                    for his full profile and appointment booking.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section" id="reviews">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Testimonials</div>
-                <h2>Patient Reviews</h2>
-            </div>
-            <div class="reviews-track">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">RS</div>
-                        <div class="review-meta">
-                            <h4>Rajesh Sharma</h4>
-                            <div class="review-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <div class="review-date">2 weeks ago</div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        Dr. Sanjeev Agarwal is an excellent physician. He listens patiently and explains 
-                        the treatment clearly. My family has been consulting him for years. 
-                        Highly recommended for general health issues.
-                    </p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">PG</div>
-                        <div class="review-meta">
-                            <h4>Priya Gupta</h4>
-                            <div class="review-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <div class="review-date">1 month ago</div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        Very experienced doctor with accurate diagnosis. The clinic is well-maintained 
-                        and hygienic. Dr. Agarwal's approach is practical and he doesn't prescribe 
-                        unnecessary medicines. Consultation is thorough.
-                    </p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">AK</div>
-                        <div class="review-meta">
-                            <h4>Amit Kumar</h4>
-                            <div class="review-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <div class="review-date">1 month ago</div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        Best general physician in Nehru Nagar area. Dr. Sanjeev has vast 
-                        experience and gives proper time to understand the problem. 
-                        My entire family consults him for all health concerns.
-                    </p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">NM</div>
-                        <div class="review-meta">
-                            <h4>Neha Malhotra</h4>
-                            <div class="review-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <div class="review-date">2 months ago</div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        Dr. Agarwal is very knowledgeable and caring. He explains everything in detail 
-                        and follows up on the treatment progress. The clinic location is convenient 
-                        for Nehru Nagar and nearby area residents.
-                    </p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">VS</div>
-                        <div class="review-meta">
-                            <h4>Vikram Singh</h4>
-                            <div class="review-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <div class="review-date">3 months ago</div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        Excellent doctor with decades of experience. Dr. Sanjeev's diagnosis is always 
-                        spot-on. He is patient, listens carefully, and provides practical health advice. 
-                        Truly trustworthy physician.
-                    </p>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <div class="google-badge">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21.35 11.1h-9.2v3.7h5.3c-.2 1.2-.9 2.2-1.9 2.9-1 .6-2.2 1-3.5 1-2.7 0-5-1.8-5.8-4.3-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9c.8-2.5 3.1-4.3 5.8-4.3 1.5 0 2.8.5 3.9 1.5l2.8-2.8C17.1 3.4 14.8 2.6 12 2.6c-4.8 0-8.8 3.5-9.6 8.1-.1.6-.2 1.2-.2 1.8s.1 1.2.2 1.8c.8 4.6 4.8 8.1 9.6 8.1 5.3 0 9.5-3.5 9.5-9.5 0-.6-.1-1.2-.2-1.8z"/>
-                    </svg>
-                    4.8 rating • Google Reviews
-                </div>
             </div>
         </div>
     </section>
@@ -648,7 +544,6 @@
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#location">Location</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -662,7 +557,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 SK Health Clinic. All rights reserved. | Website: skhealth.in</p>
+            <p>&copy; 2026 SK Health Clinic. All rights reserved.</p>
         </div>
     </footer>
 
@@ -672,16 +567,16 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalClinic",
+          "@type": ["MedicalClinic", "LocalBusiness"],
           "@id": "https://skhealth.github.io/#clinic",
           "name": "SK Health Clinic",
           "description": "Multispecialty healthcare group in Nehru Nagar, Ghaziabad — General Medicine by Dr. Sanjeev Agarwal and Advanced Urology by Dr. Keshav Agarwal (AIIMS Gold Medalist).",
-          "image": "https://skhealth.github.io/skhealth-logo.png",
+          "image": "https://skhealth.github.io/logo-512.png",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://skhealth.github.io/skhealth-logo.png",
-            "width": 200,
-            "height": 200
+            "url": "https://skhealth.github.io/logo-512.png",
+            "width": 512,
+            "height": 512
           },
           "url": "https://skhealth.github.io/",
           "telephone": "+918700491681",
@@ -734,36 +629,68 @@
         },
         {
           "@type": "Physician",
-          "@id": "https://skhealth.github.io/#doctor",
+          "@id": "https://skhealth.github.io/#physician-sanjeev",
           "name": "Dr. Sanjeev Agarwal",
           "medicalSpecialty": "General Practice",
           "worksFor": { "@id": "https://skhealth.github.io/#clinic" },
+          "telephone": "+918700491681",
+          "image": "https://skhealth.github.io/hero-sanjeev-800.webp",
+          "hasCredential": [
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "educationalLevel": "MBBS" }
+          ],
           "knowsAbout": ["Fever", "Diabetes", "Hypertension", "Thyroid Disorders", "Family Medicine", "Preventive Care"]
         },
         {
           "@type": "Physician",
-          "@id": "https://skhealth.github.io/#doctor-keshav",
+          "@id": "https://skhealth.github.io/#physician-keshav",
           "name": "Dr. Keshav Agarwal",
           "medicalSpecialty": ["Urology", "Robotic Surgery", "Kidney Transplantation"],
           "worksFor": { "@id": "https://skhealth.github.io/#clinic" },
           "url": "https://uro-care.com/",
+          "telephone": "+919818442016",
+          "image": "https://skhealth.github.io/dr-keshav-front-400.webp",
+          "sameAs": [
+            "https://uro-care.com/",
+            "https://www.linkedin.com/in/keshav-agarwal-25ab6b80/"
+          ],
           "hasCredential": [
-            { "@type": "EducationalOccupationalCredential", "educationalLevel": "M.Ch. Urology", "recognizedBy": { "@type": "Organization", "name": "AIIMS, New Delhi" } },
-            { "@type": "EducationalOccupationalCredential", "educationalLevel": "DrNB Urology" },
-            { "@type": "EducationalOccupationalCredential", "educationalLevel": "MRCS", "recognizedBy": { "@type": "Organization", "name": "Royal College of Surgeons of Edinburgh" } }
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "educationalLevel": "MBBS", "recognizedBy": { "@type": "Organization", "name": "AIIMS, New Delhi" } },
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "educationalLevel": "MS Surgery", "recognizedBy": { "@type": "Organization", "name": "AIIMS, New Delhi" } },
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "educationalLevel": "M.Ch. Urology", "recognizedBy": { "@type": "Organization", "name": "AIIMS, New Delhi" } },
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "educationalLevel": "DrNB Urology" },
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "educationalLevel": "MRCS", "recognizedBy": { "@type": "Organization", "name": "Royal College of Surgeons of Edinburgh" } }
           ],
           "award": ["MBBS Gold Medal - AIIMS New Delhi", "MS Surgery Gold Medal - AIIMS New Delhi"],
           "knowsAbout": ["Kidney Stones", "Robotic Surgery", "Kidney Transplantation", "Prostate Surgery", "Urological Oncology", "Minimally Invasive Urology"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://skhealth.github.io/#website",
+          "url": "https://skhealth.github.io/",
+          "name": "SK Health Clinic",
+          "publisher": { "@id": "https://skhealth.github.io/#clinic" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://skhealth.github.io/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://skhealth.github.io/#breadcrumbs",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://skhealth.github.io/" }
+          ]
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What are the clinic timings for Dr. Sanjeev Agarwal?",
+              "name": "What are SK Health Clinic's consultation hours?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "SK Health Clinic is open Monday to Saturday: 11:00 AM – 1:00 PM and 6:00 PM – 8:00 PM. Sunday by appointment only."
+                "text": "SK Health Clinic is open Monday to Saturday. Dr. Sanjeev Agarwal (General Physician) consults 11:00 AM – 1:00 PM and 6:00 PM – 8:00 PM. Dr. Keshav Agarwal (Urologist) consults at Nehru Nagar on Monday, Wednesday and Friday evenings, and at SK Health on Tuesday, Thursday and Saturday. Sunday by appointment only."
               }
             },
             {
@@ -787,7 +714,15 @@
               "name": "How do I book an appointment at SK Health Clinic?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Call or WhatsApp Dr. Sanjeev Agarwal at +91 87004 91681, or email support@skhealth.co.in."
+                "text": "For General Medicine, call or WhatsApp Dr. Sanjeev Agarwal at +91 87004 91681. For Urology, call or WhatsApp Dr. Keshav Agarwal at +91 98184 42016. You can also email support@skhealth.co.in or walk in during consultation hours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is the urologist at SK Health?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dr. Keshav Agarwal — AIIMS New Delhi (MBBS, MS Surgery, M.Ch. Urology), DrNB Urology, MRCS — is the consultant urologist. He specialises in robotic surgery, kidney transplantation, kidney stones and urological oncology. He consults at the Nehru Nagar clinic on Monday, Wednesday and Friday, and at SK Health on Tuesday, Thursday and Saturday. Visit uro-care.com for his full profile."
               }
             },
             {
@@ -804,14 +739,6 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Dr. Sanjeev Agarwal treats fever and viral infections, diabetes, hypertension, thyroid disorders, respiratory problems, and provides preventive health checkups and chronic disease management for all age groups."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is there a urologist at SK Health Clinic?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Dr. Keshav Agarwal, an AIIMS Dual Gold Medalist Urologist (M.Ch. Urology, MRCS), provides urology consultations at the same Nehru Nagar location. He specialises in robotic surgery, kidney transplantation, kidney stones, and urological oncology. Visit uro-care.com for his full profile."
               }
             }
           ]
@@ -892,22 +819,16 @@
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('fade-in');
                     }, index * 100);
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe elements
+        // Observe elements (fade-init class is applied in markup at parse time)
         document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.doctor-card, .hours-card, .contact-cta-card, .review-card, .location-main-card');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
-                observer.observe(el);
-            });
+            document.querySelectorAll('.fade-init').forEach(el => observer.observe(el));
         });
     </script>
 </body>
