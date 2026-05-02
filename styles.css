@@ -1552,3 +1552,28 @@
         margin-right: auto;
     }
 }
+
+/* Language toggle */
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid currentColor;
+  color: inherit;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  line-height: 1;
+}
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  background: var(--primary, #2563eb);
+  color: #fff;
+}
+.lang-toggle[aria-pressed="true"] {
+  background: var(--primary, #2563eb);
+  color: #fff;
+}
+html.lang-hi body { font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif; }
