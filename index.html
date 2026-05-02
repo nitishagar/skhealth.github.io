@@ -39,7 +39,7 @@
           imagesizes="(max-width: 800px) 100vw, 400px">
 
     <!-- External stylesheet for better caching -->
-    <link rel="stylesheet" href="styles.css?v=2026050203">
+    <link rel="stylesheet" href="styles.css?v=2026050204">
 
     <!-- Preconnect to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -341,85 +341,114 @@
             </div>
             <div class="contact-content">
                 <div class="contact-main">
-                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
-                        Schedule your appointment with Dr. Sanjeev Agarwal (General Physician)
-                        or Dr. Keshav Agarwal (Urologist). Choose your preferred method to connect with us.
+                    <p class="contact-intro" data-i18n-en="Schedule your appointment with Dr. Sanjeev Agarwal (General Physician) or Dr. Keshav Agarwal (Urologist)." data-i18n-hi="डॉ. संजीव अग्रवाल (जनरल फिजिशियन) या डॉ. केशव अग्रवाल (यूरोलॉजिस्ट) के साथ अपना अपॉइंटमेंट तय करें।">
+                        Schedule your appointment with Dr. Sanjeev Agarwal (General Physician) or Dr. Keshav Agarwal (Urologist).
                     </p>
 
-                    <div class="contact-cta-group">
-                        <a href="https://wa.me/918700491681?text=Hello%20Dr.%20Sanjeev,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="contact-cta-card fade-init" style="text-decoration: none;">
-                            <div class="cta-icon" aria-hidden="true">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                                </svg>
+                    <div class="doctor-contact-grid">
+                        <!-- Dr. Sanjeev Agarwal -->
+                        <article class="doctor-contact-card fade-init" aria-labelledby="dc-sanjeev-name">
+                            <header class="dc-head">
+                                <h3 id="dc-sanjeev-name">Dr. Sanjeev Agarwal</h3>
+                                <p class="dc-role" data-i18n-en="General Physician" data-i18n-hi="जनरल फिजिशियन">General Physician</p>
+                            </header>
+                            <div class="dc-methods">
+                                <a class="dc-method dc-method-wa" href="https://wa.me/918700491681?text=Hello%20Dr.%20Sanjeev,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer">
+                                    <span class="dc-method-icon" aria-hidden="true">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="dc-method-text">
+                                        <span class="dc-method-label" data-i18n-en="WhatsApp" data-i18n-hi="व्हाट्सएप">WhatsApp</span>
+                                        <span class="dc-method-value">+91 87004 91681</span>
+                                    </span>
+                                </a>
+                                <a class="dc-method dc-method-call" href="tel:+918700491681">
+                                    <span class="dc-method-icon" aria-hidden="true">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="dc-method-text">
+                                        <span class="dc-method-label" data-i18n-en="Call" data-i18n-hi="कॉल करें">Call</span>
+                                        <span class="dc-method-value">+91 87004 91681</span>
+                                    </span>
+                                </a>
                             </div>
-                            <h4 data-i18n-en="WhatsApp Dr. Sanjeev" data-i18n-hi="व्हाट्सएप डॉ. संजीव">WhatsApp Dr. Sanjeev</h4>
-                            <p data-i18n-en="General Physician" data-i18n-hi="जनरल फिजिशियन">General Physician</p>
-                            <div class="number">+91 87004 91681</div>
-                        </a>
+                            <div class="dc-hours">
+                                <h4 data-i18n-en="Consultation Hours" data-i18n-hi="परामर्श समय">Consultation Hours</h4>
+                                <dl class="dc-schedule">
+                                    <div>
+                                        <dt data-i18n-en="Mon – Sat" data-i18n-hi="सोम – शनि">Mon – Sat</dt>
+                                        <dd>11:00 AM – 1:00 PM</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n-en="Mon – Sat" data-i18n-hi="सोम – शनि">Mon – Sat</dt>
+                                        <dd>6:00 PM – 8:00 PM</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n-en="Sunday" data-i18n-hi="रविवार">Sunday</dt>
+                                        <dd data-i18n-en="By appointment" data-i18n-hi="अपॉइंटमेंट द्वारा">By appointment</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </article>
 
-                        <a href="https://wa.me/919818442016?text=Hello%20Dr.%20Keshav,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="contact-cta-card fade-init" style="text-decoration: none;">
-                            <div class="cta-icon" aria-hidden="true">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                                </svg>
+                        <!-- Dr. Keshav Agarwal -->
+                        <article class="doctor-contact-card fade-init" aria-labelledby="dc-keshav-name">
+                            <header class="dc-head">
+                                <h3 id="dc-keshav-name">Dr. Keshav Agarwal</h3>
+                                <p class="dc-role" data-i18n-en="Urologist · AIIMS Gold Medalist" data-i18n-hi="यूरोलॉजिस्ट · AIIMS स्वर्ण पदक विजेता">Urologist · AIIMS Gold Medalist</p>
+                            </header>
+                            <div class="dc-methods">
+                                <a class="dc-method dc-method-wa" href="https://wa.me/919818442016?text=Hello%20Dr.%20Keshav,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer">
+                                    <span class="dc-method-icon" aria-hidden="true">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="dc-method-text">
+                                        <span class="dc-method-label" data-i18n-en="WhatsApp" data-i18n-hi="व्हाट्सएप">WhatsApp</span>
+                                        <span class="dc-method-value">+91 98184 42016</span>
+                                    </span>
+                                </a>
+                                <a class="dc-method dc-method-call" href="tel:+919818442016">
+                                    <span class="dc-method-icon" aria-hidden="true">
+                                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="dc-method-text">
+                                        <span class="dc-method-label" data-i18n-en="Call" data-i18n-hi="कॉल करें">Call</span>
+                                        <span class="dc-method-value">+91 98184 42016</span>
+                                    </span>
+                                </a>
                             </div>
-                            <h4 data-i18n-en="WhatsApp Dr. Keshav" data-i18n-hi="व्हाट्सएप डॉ. केशव">WhatsApp Dr. Keshav</h4>
-                            <p data-i18n-en="Urologist" data-i18n-hi="यूरोलॉजिस्ट">Urologist</p>
-                            <div class="number">+91 98184 42016</div>
-                        </a>
-
-                        <a href="tel:+918700491681" class="contact-cta-card fade-init" style="text-decoration: none;">
-                            <div class="cta-icon" aria-hidden="true">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-                                </svg>
+                            <div class="dc-hours">
+                                <h4 data-i18n-en="At SK Health" data-i18n-hi="SK हेल्थ में">At SK Health</h4>
+                                <dl class="dc-schedule">
+                                    <div>
+                                        <dt data-i18n-en="Tue, Thu, Sat" data-i18n-hi="मंगल, गुरु, शनि">Tue, Thu, Sat</dt>
+                                        <dd data-i18n-en="By appointment" data-i18n-hi="अपॉइंटमेंट द्वारा">By appointment</dd>
+                                    </div>
+                                </dl>
+                                <p class="dc-note" data-i18n-en="Also consults at Uro-Clinic, Nehru Nagar." data-i18n-hi="नेहरू नगर स्थित यूरो-क्लिनिक में भी परामर्श उपलब्ध।">Also consults at Uro-Clinic, Nehru Nagar.</p>
                             </div>
-                            <h4 data-i18n-en="Call Dr. Sanjeev" data-i18n-hi="डॉ. संजीव को कॉल करें">Call Dr. Sanjeev</h4>
-                            <p data-i18n-en="General Physician" data-i18n-hi="जनरल फिजिशियन">General Physician</p>
-                            <div class="number">+91 87004 91681</div>
-                        </a>
-
-                        <a href="tel:+919818442016" class="contact-cta-card fade-init" style="text-decoration: none;">
-                            <div class="cta-icon" aria-hidden="true">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n-en="Call Dr. Keshav" data-i18n-hi="डॉ. केशव को कॉल करें">Call Dr. Keshav</h4>
-                            <p data-i18n-en="Urologist" data-i18n-hi="यूरोलॉजिस्ट">Urologist</p>
-                            <div class="number">+91 98184 42016</div>
-                        </a>
-
-                        <a href="mailto:support@skhealth.co.in" class="contact-cta-card fade-init" style="text-decoration: none;">
-                            <div class="cta-icon" aria-hidden="true">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n-en="Email" data-i18n-hi="ईमेल">Email</h4>
-                            <p data-i18n-en="Send Inquiry" data-i18n-hi="पूछताछ भेजें">Send Inquiry</p>
-                            <div class="number" style="font-size: 1rem;">support@skhealth.co.in</div>
-                        </a>
+                        </article>
                     </div>
-                    
-                    <div class="contact-hours">
-                        <div class="hours-card fade-init">
-                            <h5 data-i18n-en="Morning Consultation" data-i18n-hi="प्रातःकालीन परामर्श">Morning Consultation</h5>
-                            <p>11:00 AM - 1:00 PM</p>
-                            <p style="font-size: 0.875rem; color: var(--text-light);" data-i18n-en="Monday - Saturday" data-i18n-hi="सोमवार – शनिवार">Monday - Saturday</p>
-                        </div>
-                        <div class="hours-card fade-init">
-                            <h5 data-i18n-en="Evening Consultation" data-i18n-hi="सायंकालीन परामर्श">Evening Consultation</h5>
-                            <p>6:00 PM - 8:00 PM</p>
-                            <p style="font-size: 0.875rem; color: var(--text-light);" data-i18n-en="Monday - Saturday" data-i18n-hi="सोमवार – शनिवार">Monday - Saturday</p>
-                        </div>
-                        <div class="hours-card fade-init">
-                            <h5 data-i18n-en="Sunday" data-i18n-hi="रविवार">Sunday</h5>
-                            <p data-i18n-en="Closed" data-i18n-hi="बंद">Closed</p>
-                            <p style="font-size: 0.875rem; color: var(--text-light);" data-i18n-en="By Appointment Only" data-i18n-hi="केवल अपॉइंटमेंट द्वारा">By Appointment Only</p>
-                        </div>
-                    </div>
+
+                    <a class="contact-email-tile fade-init" href="mailto:support@skhealth.co.in">
+                        <span class="dc-method-icon" aria-hidden="true">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </span>
+                        <span class="contact-email-text">
+                            <span class="contact-email-label" data-i18n-en="Email" data-i18n-hi="ईमेल">Email</span>
+                            <span class="contact-email-value">support@skhealth.co.in</span>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>
