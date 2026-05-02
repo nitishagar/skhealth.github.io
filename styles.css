@@ -265,7 +265,7 @@
         }
 
         .hero-content {
-            animation: fadeInUp 0.8s ease 0.1s both;
+            /* Entrance animation removed; hero content is above-the-fold so no staged reveal is needed. */
         }
 
         .hero-badge {
@@ -521,11 +521,11 @@
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
-            animation: fadeInUp 0.8s ease;
+            /* fadeInUp removed: axe-core samples elements mid-animation, and the IntersectionObserver .fade-init class is the canonical entrance animation path. */
         }
 
         .section-subtitle {
-            color: var(--accent);
+            color: var(--accent-dark);
             font-size: 0.875rem;
             font-weight: 600;
             letter-spacing: 0.1em;
@@ -995,9 +995,12 @@
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.85);
             font-size: 0.875rem;
         }
+        .footer-bottom p { color: rgba(255, 255, 255, 0.85); }
+
+        .footer-links h4 { color: rgba(255, 255, 255, 0.85); }
 
         /* Animations */
         @keyframes fadeIn {
@@ -1182,7 +1185,7 @@
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--accent);
+            background: var(--primary);
             color: white;
             padding: 8px 16px;
             text-decoration: none;
