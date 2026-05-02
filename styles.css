@@ -1553,27 +1553,55 @@
     }
 }
 
-/* Language toggle */
+/* Language toggle — matches the pill button language of the site */
 .lang-toggle {
-  background: transparent;
-  border: 1.5px solid currentColor;
-  color: inherit;
-  padding: 0.35rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background: var(--accent);
+  border: 1.5px solid var(--accent);
+  color: #fff;
+  padding: 0.5rem 1.1rem;
   border-radius: 999px;
   font: inherit;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   cursor: pointer;
-  margin-left: 0.5rem;
+  line-height: 1;
+  min-height: 2.25rem;
+  box-shadow: 0 1px 2px rgba(15, 118, 110, 0.2);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.lang-toggle::before {
+  content: "🌐";
+  font-size: 0.9em;
   line-height: 1;
 }
-.lang-toggle:hover,
-.lang-toggle:focus-visible {
-  background: var(--primary, #2563eb);
+.lang-toggle:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 118, 110, 0.25);
+}
+.lang-toggle:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 3px;
 }
 .lang-toggle[aria-pressed="true"] {
-  background: var(--primary, #2563eb);
+  background: var(--primary);
+  border-color: var(--primary);
   color: #fff;
 }
-html.lang-hi body { font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif; }
+html.lang-hi body {
+  font-family: 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .lang-toggle {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+  }
+}
