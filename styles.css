@@ -11,7 +11,7 @@
             --accent-dark: #0f766e;       /* Deep teal */
             --text-primary: #1e293b;      /* Matches primary */
             --text-secondary: #64748b;    /* Unchanged - good neutral */
-            --text-light: #94a3b8;        /* Unchanged - good neutral */
+            --text-light: #475569;        /* WCAG AA on white and on --bg-light */
             --bg-white: #ffffff;          /* Unchanged */
             --bg-light: #f8fafc;          /* Unchanged */
             --bg-gradient: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%); /* Warm mint gradient */
